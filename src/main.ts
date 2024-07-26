@@ -1,7 +1,7 @@
 import './style.css'
 import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
-import { charmander } from './bases/03-classes.ts'
+import { charmander } from './bases/04-injection.ts'
 
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
@@ -12,5 +12,5 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <a href="https://www.typescriptlang.org/" target="_blank">
       <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
     </a>
-    <h1> ${ charmander.name } </h1>
+    <h1> ${ charmander.name } ${ charmander.id }</h1>
 `
