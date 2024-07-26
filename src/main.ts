@@ -1,7 +1,8 @@
+import { charmander } from './bases/05-decorators'
 import './style.css'
 import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
-import { charmander } from './bases/04-injection.ts'
+// import { charmander } from './bases/04-injection.ts'
 
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
