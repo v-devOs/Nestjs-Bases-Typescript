@@ -1,6 +1,13 @@
 import axios from "axios";
 
-export class PokeApiFetchAdapater {
+
+export interface HttpAdapater {
+
+  get<T>( url: string ): Promise<T>; 
+}
+
+
+export class PokeApiFetchAdapater implements HttpAdapater{
 
   async get<T>( url: string ): Promise<T>{
     const resp = await fetch( url );
@@ -10,7 +17,7 @@ export class PokeApiFetchAdapater {
   }
 }
 
-export class PokeApiAdapter {
+export class PokeApiAdapter implements HttpAdapater {
 
   private readonly axios = axios;
 
